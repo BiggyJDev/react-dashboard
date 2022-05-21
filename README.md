@@ -43,3 +43,17 @@ The main test is to make sure our CSS framework Tailwind has been set up correct
 The test failed. Now to find out why Tailwind is not working correctly.
 
 A silly mistake, I accidently created the config files outside of our root directory
+
+# File Structure
+
+Now we have our app initialised we need to create our file structure. As this application is quite large in size and contains many stand-alone files, our file structure is crucial.
+
+Firstly we need to create out components folder. Next we need to create a Contexts folder, this will use our React Context API. I have never used the React Context API before, so this will be a first and another opportunity to learn. I'm looking forward to this! :)
+
+Next we need to create a Pages folder, unlike components where a component can not be used inside another component. We will create a page which will contain multiple components
+
+Components -> Pages -> Applications
+
+Lastly we have the data folder, this will contain images and demo-data for running our application. This folder has been pulled from the JS Mastery Repo as it contains all the data we need for this build.
+
+In the data file we have some fake images for people and products. Alongside this we also have a dummy.js file which holds lots of dummy data we can use in this project
