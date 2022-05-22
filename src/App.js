@@ -9,10 +9,10 @@ import {
   Ecommerce,
   Orders,
   Calendar,
-  Employees,
+  Employee,
   Stacked,
   Pyramid,
-  Customers,
+  Customer,
   Kanban,
   Line,
   Area,
@@ -27,7 +27,7 @@ import {
 import "./App.css";
 
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
   return (
     <div>
       <BrowserRouter>
@@ -74,8 +74,8 @@ const App = () => {
 
               {/* Pages */}
               <Route path='/orders' element={<Orders />} />
-              <Route path='/employees' element={<Employees />} />
-              <Route path='/customers' element={<Customers />} />
+              <Route path='/employees' element={<Employee />} />
+              <Route path='/customers' element={<Customer />} />
 
               {/* Apps */}
               <Route path='/kanban' element={<Kanban />} />
