@@ -143,3 +143,44 @@ We can import all our Components/Pages through a destructured assignment because
 ### Utilising our new components.
 
 Now we have our Components and Pages imported we can go back and remove our hard coded text and replace them with the relevant component
+
+# The Application
+
+## Sidebar
+
+Let's get started on the sidebar
+
+First we need to be able to switch between different pages in our application, so we need to import both Link and NavLink from React-Router-DOM. Alongside the navigation we need a few icons and the Tooltip Component from @SyncFusion. Lastly we will need some data to work with so we will import the links from ../data/dummy
+
+Our side bar is going to be affected by state so whilst we develop it we are going to create a dummy state and set the activeMenu = true
+
+For this side bar we are going to be using a lot of logic, hence why we have the dummy data file imported.
+
+We start our Sidebar off with a div that is styled to fill the screen and control the overflow.
+
+Within this div we have our first logical statement, this checks to see if the activeMenu is true and if it is true it will display a react fragment which contains:
+
+1. A div that contains
+
+- The heading for the nav bar
+- An exit button if the application is loaded on devices of medium width or less
+
+2. A div that contain:
+
+- The title and Logo that is mapped from the dummy data file
+
+For the title of each section we map the links we imported earlier mapping each object to an 'item'..
+
+We then generate the title by looping through the data file displaying each item.title inside of a p tag
+
+For the actual link, we house this inside the NavLink component we imported from react-router-dom.
+
+The destination of the link is given by a template literal string `./{Link.name}`.
+
+The key is also assigned to Link.name so it is unique
+
+The onClick function is not in use yet, we will use that later, so it is set to an empty callback function.
+
+With the styling we have used some Logic: We want to change the styling of the link dependant on whether it is active or not. The styling has been stored in two variables to keep our code clean. We have activeLink and normalLink
+
+Inside the NavLink we need to render something, we do thisby using our mapped data by rendering the Link.icon and a span tag that contains Link.name
